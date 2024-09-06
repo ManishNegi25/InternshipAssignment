@@ -13,7 +13,8 @@ const corsOptions = {
   methods: 'GET,POST,PUT,DELETE,OPTIONS', // Allowed methods
   allowedHeaders: 'Content-Type, Authorization', // Allowed headers
   credentials: true, // Allow credentials (e.g., cookies, authorization headers)
-  optionsSuccessStatus: 200 // For legacy browsers support
+  preflightContinue: false,
+  optionsSuccessStatus: 204 // For legacy browsers support
 };
 
 // Use CORS middleware with the specified options
