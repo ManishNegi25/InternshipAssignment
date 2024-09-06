@@ -28,7 +28,7 @@ const Availability = () => {
     const newAvailability = { start, end, duration };
 
     axios
-      .post('https://internship-assignment-omega.vercel.app/api/availability', newAvailability, {
+      .post("https://internship-assignment-omega.vercel.app/api/availability", newAvailability, {
         headers: { Authorization: `Bearer ${localStorage.getItem('userToken')}` },
       })
       .then(() => {

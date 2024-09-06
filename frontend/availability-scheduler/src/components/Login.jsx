@@ -8,7 +8,7 @@ const Login = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await axios.post('https://internship-assignment-omega.vercel.app/api/login', { email });
+      const response = await axios.post("api/login", { email });
       localStorage.setItem('userToken', response.data.token);
       window.location.href = '/availability';
     } catch (error) {
