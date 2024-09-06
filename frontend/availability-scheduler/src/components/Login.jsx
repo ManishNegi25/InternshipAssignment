@@ -21,7 +21,7 @@ const Login = () => {
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-blue-500 to-purple-600">
       <div className="bg-white shadow-xl rounded-lg p-8 max-w-md w-full transform hover:scale-105 transition-transform duration-300 ease-out">
         <h2 className="text-3xl font-bold text-gray-800 text-center mb-8">
-          Welcome Back
+          Welcome 
         </h2>
         {error && (
           <div className="text-red-600 mb-4 text-center">
