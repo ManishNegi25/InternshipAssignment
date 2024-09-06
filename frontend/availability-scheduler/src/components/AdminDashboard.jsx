@@ -8,7 +8,7 @@ const AdminDashboard = () => {
   const [sessions, setSessions] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:5000/api/admin/users").then((response) => {
+    axios.get("https://internship-assignment-omega.vercel.app/api/admin/users").then((response) => {
       setUsers(response.data);
     });
   }, []);
