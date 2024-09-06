@@ -23,7 +23,7 @@ const ManageAvailability = () => {
         }
 
         const availabilityResponse = await axios.get(
-          "http://localhost:5000/api/availability",
+          "https://internship-assignment-omega.vercel.app/api/availability",
           {
             headers: { Authorization: `Bearer ${token}` },
           }
@@ -31,7 +31,7 @@ const ManageAvailability = () => {
         setAvailabilities(availabilityResponse.data);
 
         const sessionsResponse = await axios.get(
-          "http://localhost:5000/api/sessions",
+          "https://internship-assignment-omega.vercel.app/api/sessions",
           {
             headers: { Authorization: `Bearer ${token}` },
           }
@@ -47,7 +47,7 @@ const ManageAvailability = () => {
 
   const handleDeleteSession = (id) => {
     axios
-      .delete(`http://localhost:5000/api/sessions/${id}`, {
+      .delete(`https://internship-assignment-omega.vercel.app/api/sessions/${id}`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("userToken")}`,
         },
@@ -80,7 +80,7 @@ const ManageAvailability = () => {
 
     axios
       .put(
-        `http://localhost:5000/api/sessions/${id}`,
+        `https://internship-assignment-omega.vercel.app/api/sessions/${id}`,
         { start: newStart, end: newEnd, type: newType },
         {
           headers: {

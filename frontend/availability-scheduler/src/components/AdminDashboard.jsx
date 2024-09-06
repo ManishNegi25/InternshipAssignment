@@ -8,7 +8,7 @@ const AdminDashboard = () => {
   const [sessions, setSessions] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:5000/api/admin/users").then((response) => {
+    axios.get("https://internship-assignment-omega.vercel.app/api/admin/users").then((response) => {
       setUsers(response.data);
     });
   }, []);
@@ -16,7 +16,7 @@ const AdminDashboard = () => {
   const handleUserSelect = (user) => {
     setSelectedUser(user);
     axios
-      .get(`http://localhost:5000/api/admin/availability/${user._id}`)
+      .get(`https://internship-assignment-omega.vercel.app/api/admin/availability/${user._id}`)
       .then((response) => {
         setAvailability(response.data);
       });
@@ -31,7 +31,7 @@ const AdminDashboard = () => {
     };
 
     axios
-      .post("http://localhost:5000/api/admin/schedule", session, {
+      .post("https://internship-assignment-omega.vercel.app/api/admin/schedule", session, {
         headers: { Authorization: `Bearer ${localStorage.getItem("userToken")}` },
       })
       .then(() => {
@@ -46,7 +46,7 @@ const AdminDashboard = () => {
 
   const handleDeleteSession = (sessionId) => {
     axios
-      .delete(`http://localhost:5000/api/admin/session/${sessionId}`, {
+      .delete(`https://internship-assignment-omega.vercel.app/api/admin/session/${sessionId}`, {
         headers: { Authorization: `Bearer ${localStorage.getItem("userToken")}` },
       })
       .then(() => {
@@ -62,7 +62,7 @@ const AdminDashboard = () => {
   const fetchSessions = () => {
     if (selectedUser) {
       axios
-        .get(`http://localhost:5000/api/admin/sessions?userId=${selectedUser._id}`, {
+        .get(`https://internship-assignment-omega.vercel.app/api/admin/sessions?userId=${selectedUser._id}`, {
           headers: { Authorization: `Bearer ${localStorage.getItem("userToken")}` },
         })
         .then((response) => {
