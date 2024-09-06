@@ -1,10 +1,10 @@
 # InternshipAssignment
  
 Availability Management System
---Overview-----------------------------------------------------------
+Overview
 Welcome to the Availability Management System! This web application is designed to help users manage their availability and scheduled sessions. Users can set their availability, view their scheduled sessions, and administrators can manage availability and sessions for multiple users.
 
------------------------------------------------Features-----------------------------------------------------
+Features
 User Login: Authenticate users to access their dashboard.
 Set Availability: Users can set their available time slots, including start time, end time, and duration.
 Manage Sessions: Users can view, update, or delete their scheduled sessions.
@@ -18,8 +18,7 @@ react-calendar: Calendar component for date selection.
 react-router-dom: Routing library for navigation.
 Getting Started
 To get a local copy up and running, follow these steps:
-
-----------------------------------------------Prerequisites--------------------------------------------------
+Prerequisites
 Node.js and npm installed on your machine.
 Access to a backend API (adjust the endpoints if necessary).
 Installation
@@ -45,7 +44,7 @@ Copy code
 npm start
 The application will be available at http://localhost:5000 by default.
 
------------------------------------------------------API Endpoints---------------------------------------------------------
+API Endpoints
 The application interacts with the following API endpoints:
 
 POST /api/login: Authenticate user and obtain a token.
@@ -58,7 +57,7 @@ GET /api/admin/users: Fetch list of users for admin.
 GET /api/admin/availability/:userId: Fetch availability for a specific user.
 POST /api/admin/schedule: Schedule a new session for a user.
 DELETE /api/admin/session/:id: Delete a session as admin.
---------------------------------------------------Configuration------------------------------------------------
+Configuratio
 Backend API: Ensure the backend API is running and accessible. Update the API endpoints in the code if necessary.
 Authentication: User authentication is required. Ensure a valid userToken is stored in localStorage for accessing protected routes.
 Usage
