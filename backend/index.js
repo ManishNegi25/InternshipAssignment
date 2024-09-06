@@ -7,8 +7,15 @@ const jwt = require("jsonwebtoken");
 const app = express();
 const PORT = 5000;
 
-// Middleware
-app.use(cors({ origin: 'https://internship-assignment-frontendlink.vercel.app' }));
+
+
+// Allow requests from your specific frontend URL
+app.use(cors({
+  origin: 'https://internship-assignment-frontendlink.vercel.app', // Your frontend URL
+  methods: 'GET,POST,PUT,DELETE,OPTIONS', // Allowed methods
+  allowedHeaders: 'Content-Type, Authorization' // Allowed headers
+}));
+
 
 app.use(bodyParser.json());
 
