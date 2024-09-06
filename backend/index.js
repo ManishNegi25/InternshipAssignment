@@ -9,7 +9,7 @@ const PORT = 5000;
 
 // CORS configuration
 const corsOptions = {
-  origin: "https://internship-assignment-frontendlink.vercel.app", // Your frontend URL
+  origin: "*", // Your frontend URL
   methods: 'GET,POST,PUT,DELETE,OPTIONS', // Allowed methods
   allowedHeaders: 'Content-Type, Authorization', // Allowed headers
   credentials: true, // Allow credentials (e.g., cookies, authorization headers)
